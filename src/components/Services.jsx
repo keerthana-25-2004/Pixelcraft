@@ -64,7 +64,7 @@ function Services() {
   ];
 
   return (
-    <section id="services" className="py-28 bg-gray-50">
+    <section id="services" className="py-28 bg-gray-50" data-aos="fade-up">
       <div className="max-w-6xl mx-auto px-6">
 
         {/* Heading */}

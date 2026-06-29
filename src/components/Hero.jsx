@@ -21,12 +21,17 @@ function Hero() {
   ];
 
   return (
-    <section id="home" className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-16">
+    <section
+      id="home"
+      className="bg-gradient-to-br from-purple-50 via-white to-purple-100 py-20"
+    >
+      <div className="max-w-7xl mx-auto px-6 flex flex-col-reverse lg:flex-row items-center justify-between gap-16">
 
         {/* Left Content */}
-        <div className="flex-1 text-center lg:text-left">
-
+        <div
+          className="flex-1 text-center lg:text-left"
+          data-aos="fade-right"
+        >
           <span className="inline-block bg-purple-100 text-purple-600 font-semibold px-5 py-2 rounded-full mb-5">
             PixelCraft Studio
           </span>
@@ -86,47 +91,56 @@ function Hero() {
         </div>
 
         {/* Right Image */}
-        <div className="flex-1 flex justify-center">
+        <div
+          className="w-full lg:flex-1 flex justify-center items-center"
+          data-aos="fade-left"
+        >
 
-          <div className="relative">
+          <div className="relative flex justify-center w-full">
 
             <img
               src={heroImage}
               alt="Hero"
               className="
-                w-[300px]
-                sm:w-[420px]
-                md:w-[520px]
-                lg:w-[500px]
-                xl:w-[560px]
-                h-[380px]
-                sm:h-[450px]
-                md:h-[550px]
-                lg:h-[560px]
-                object-cover
-                rounded-3xl
+                w-[90%]
+                sm:w-[75%]
+                md:w-[65%]
+                lg:w-[90%]
+                xl:w-[80%]
+                max-w-xl
+                rounded-2xl
                 shadow-2xl
-                hover:scale-105
-                transition-all
-                duration-500
+                object-cover
+                animate-float
               "
             />
 
-            {/* Top Right Card */}
-            <div className="absolute top-5 -right-5 bg-white px-5 py-4 rounded-2xl shadow-xl hidden sm:block">
+            {/* Desktop Only Floating Card */}
+            <div className="absolute top-6 -right-5 bg-white px-5 py-4 rounded-2xl shadow-xl hidden lg:block">
+
               <div className="flex items-center gap-2">
+
                 <FaStar className="text-yellow-500 text-xl" />
+
                 <div>
-                  <h3 className="font-bold text-lg">4.9/5</h3>
+
+                  <h3 className="font-bold text-lg">
+                    4.9/5
+                  </h3>
+
                   <p className="text-gray-500 text-sm">
                     Client Rating
                   </p>
+
                 </div>
+
               </div>
+
             </div>
 
-            {/* Bottom Left Card */}
-            <div className="absolute -bottom-6 -left-5 bg-purple-600 text-white px-6 py-4 rounded-2xl shadow-xl hidden sm:block">
+            {/* Desktop Only Floating Card */}
+            <div className="absolute -bottom-2 -left-5 bg-purple-600 text-white px-6 py-4 rounded-2xl shadow-xl hidden lg:block">
+
               <h3 className="text-3xl font-bold">
                 250+
               </h3>
@@ -134,6 +148,7 @@ function Hero() {
               <p className="text-sm">
                 Successful Projects
               </p>
+
             </div>
 
           </div>

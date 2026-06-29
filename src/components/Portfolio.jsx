@@ -42,11 +42,10 @@ function Portfolio() {
   ];
 
   return (
-    <section id="portfolio" className="py-28 bg-white">
-      <div className="max-w-6xl mx-auto px-6">
+    <section id="portfolio" className="py-28 bg-white" data-aos="zoom-in">
+      <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
-
         <div className="text-center mb-20">
 
           <span className="bg-purple-100 text-purple-600 px-5 py-2 rounded-full font-semibold">
@@ -64,43 +63,44 @@ function Portfolio() {
 
         </div>
 
-        {/* Portfolio Grid */}
-
+        {/* Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
 
           {projects.map((project, index) => (
 
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl shadow-lg cursor-pointer"
+              className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
             >
 
               {/* Image */}
+              <div className="overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-64 object-cover hover:scale-110 transition-transform duration-500"
+                />
+              </div>
 
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
-              />
+              {/* Content */}
+              <div className="p-6">
 
-              {/* Overlay */}
-
-              <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col justify-end p-6">
-
-                <p className="text-purple-300 text-sm font-semibold mb-2">
+                <span className="text-purple-600 font-semibold text-sm uppercase tracking-wider">
                   {project.category}
-                </p>
+                </span>
 
-                <h3 className="text-white text-2xl font-bold">
+                <h3 className="text-2xl font-bold text-gray-900 mt-2">
                   {project.title}
                 </h3>
 
-                <button className="mt-4 flex items-center gap-2 text-white font-medium hover:gap-4 transition-all duration-300 cursor-pointer">
+                <p className="text-gray-600 mt-3">
+                  A modern and creative project built with user-friendly
+                  design and responsive layouts.
+                </p>
 
+                <button className="mt-5 flex items-center gap-2 text-purple-600 font-semibold hover:gap-4 transition-all duration-300">
                   View Project
-
                   <FaArrowRight />
-
                 </button>
 
               </div>
